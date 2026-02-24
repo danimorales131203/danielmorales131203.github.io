@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF -8">
+    <link rel="stylesheet" href="style_toggle.css">
+    <title>Magia con Toggle</title>
+
+
+    <style>
+
+    </style>
+
+
+</head>
+
+
+<header>Daniel Morales</header>
+<nav>Menu de navegacion</nav>
+<body>
+
+    <main>
+        <section>
+            <div>
+                <h1 id="saludo">Mi Portafolio Creativo</h1>
+            <button onclick="cambiarTema()">Cambiar Tema</button>
+            <img id="profilePic" src="C:\Users\adani\OneDrive\Escritorio\PSD\programacionSitiosDinamicos\imagenPrueba.jpeg" alt="Foto de portada">
+
+            </div>
+            
+        </section>
+
+        <section>
+            <div>
+                <p>Soy un diseñador multimedia con especial interes en el diseño y desarrollo de videojuegos.</p>
+            </div>
+
+        </section>
+    </main>    
+
+
+
+    <script>
+        function cambiarTema() {
+            let cuerpo = document.body;
+            cuerpo.classList.toggle("modo-oscuro");
+        }
+    </script>
+</body>
+
+<footer id="footer">
+    <h2>Tel: 664 363 7791</h2>
+
+</footer>
+
+</html>
