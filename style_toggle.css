@@ -127,14 +127,11 @@ footer {
 }
 
 .sobre-mi-layout {
-  display: flex;
-  gap: 25px;
-  align-items: center;        
-  justify-content: space-between;
+  display: block; /* ya no usamos flex aquí */
 }
 
 .sobre-mi-texto {
-  flex: 2;                    
+  position: relative;
 }
 
 .sobre-mi-media {
@@ -147,10 +144,12 @@ footer {
   width: 220px;
   height: auto;
   border-radius: 25%;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-    transition: transform 0.4s ease;
-}
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  transition: transform 0.4s ease;
 
+  float: right;            
+  margin: 0 0 12px 18px;   
+}
 .sobre-mi-img:hover img {
     transform: scale(1.08);
 }
@@ -213,4 +212,14 @@ footer {
     img{
         width: 150px;
     }
+
+    #sobre-mi .sobre-mi-img {
+    width: 150px;
+    float: right;
+    margin: 0 0 10px 14px;
+  }
+
+  #sobre-mi p {
+    line-height: 1.5;
+  }
 }
