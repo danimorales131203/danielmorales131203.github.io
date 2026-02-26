@@ -1,69 +1,132 @@
-@media (max-width: 768px) {
-    header {
-        flex-direction: column;
-        gap: 15px;
-        padding: 20px;
-    }
-
-    nav ul {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    section {
-        width: 90%;
-        padding: 20px;
-    }
-
-    img {
-        width: 150px;
-    }
-}
-
-
 body {
-    background-color:rgb(255, 255, 255);
-    color:rgb(0, 24, 46);
-    font-family: sans-serif;
-    transition: 0.4s;
-    text-align: center;
-    padding-top: 50px;
-
+    font-family: Arial, sans-serif; /* Tipografía básica */
+    background-color: #f4f7f6; /* Fondo claro */
+    color: #333333; /* Texto oscuro */
+    margin: 0;
+    padding: 0;
+    transition: 0.4s; /* Hace que el cambio de color sea suave */
 }
+
+/* ESTRUCTURA SEMÁNTICA Y BOX MODEL */
+header {
+    background-color: #ffffff;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 2px solid #dddddd;
+}
+
+/* Centramos el contenido principal con Flexbox */
+main {
+    padding: 40px;
+    display: flex;
+    justify-content: center; 
+}
+
+/* Las "Tarjetas" de contenido */
+section {
+    background-color: #ffffff;
+    width: 600px; /* Ancho fijo para controlar la caja */
+    padding: 30px;
+    margin-bottom: 20px;
+    border-radius: 10px; /* Esquinas redondeadas */
+    border: 1px solid #dddddd;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1); /* Sombra estilo polaroid */
+    text-align: center;
+}
+
+img {
+    width: 200px;
+    border-radius: 50%; /* Círculo perfecto */
+    border: 5px solid #0077b6; /* Borde azul */
+}
+
+.icon
+{
+    max-width: 15px;
+    border-color: #f5f5f5;
+}
+
+
+h1 {
+    color: #0077b6; /* Texto Azul */
+}
+
+nav ul {
+    list-style: none; /* Quitamos las viñetas */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px; /* Espacio entre los links */
+}
+
+nav a {
+    text-decoration: none; /* Quitamos la línea de abajo del link */
+    color: #333333;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #0077b6; /* Efecto al pasar el mouse */
+}
+
 
 button {
+    background-color: #0077b6;
+    color: white;
     padding: 10px 20px;
-    font-size: 16px;
+    border: none;
+    border-radius: 5px;
     cursor: pointer;
-    border-radius: 20px;
-    border: 2px solid #333;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #ffffff;
+    border-top: 1px solid #dddddd;
 }
 
 .modo-oscuro {
     background-color: #1a1a1a;
-    color: #f1f1f1;
+    color: #ffffff;
 }
 
-.modo-oscuro button {
-    border-color: #f1f1f1;
-    background-color: #333;
-    color: white;
+.modo-oscuro header,
+.modo-oscuro section,
+.modo-oscuro footer {
+    background-color: #333333;
+    border-color: #555555;
 }
 
-#profilePic {
-    width: 200px;
-    height: 200px;
-    box-shadow: 0 0 20px rgba(0,0,0,0.5);
-
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); 
+.modo-oscuro h1, 
+.modo-oscuro nav a:hover {
+    color: #38bdf8; 
 }
 
-#footer {
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, 400%);
+.modo-oscuro a {
+    color: #ffffff; /* Los links se vuelven blancos en modo oscuro */
+}
 
-    font-style: italic;
+@media(max-width: 768px)
+{
+    header{
+        flex-direction: column;
+        gap: 15 px;
+        padding: 20px;
+    }
+
+    nav ul{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    section{
+        width: 90%;
+        padding: 20px;
+    }
+    img{
+        width: 150px;
+    }
 }
