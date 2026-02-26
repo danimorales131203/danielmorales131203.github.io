@@ -1,7 +1,7 @@
 body {
-    font-family: Arial, sans-serif; /* Tipografía básica */
-    background-color: #f4f7f6; /* Fondo claro */
-    color: #333333; /* Texto oscuro */
+    font-family: "Oswald", sans-serif; /* Tipografía básica */
+    background-color: #EFC69B; /* Fondo claro */
+    color: #CCB69B; /* Texto oscuro */
     margin: 0;
     padding: 0;
     transition: 0.4s; /* Hace que el cambio de color sea suave */
@@ -9,10 +9,14 @@ body {
 
 /* ESTRUCTURA SEMÁNTICA Y BOX MODEL */
 header {
-    background-color: #ffffff;
+    background-color: #AF1B3F;
     padding: 20px;
     text-align: center;
-    border-bottom: 2px solid #dddddd;
+    border-bottom: 2px solid #473144;
+    font-family: "Pixelify Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
 }
 
 /* Centramos el contenido principal con Flexbox */
@@ -24,20 +28,28 @@ main {
 
 /* Las "Tarjetas" de contenido */
 section {
-    background-color: #ffffff;
+    background-color: #473144;
     width: 600px; /* Ancho fijo para controlar la caja */
     padding: 30px;
     margin-bottom: 20px;
     border-radius: 10px; /* Esquinas redondeadas */
-    border: 1px solid #dddddd;
+    border: 1px solid #3C6E71;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1); /* Sombra estilo polaroid */
     text-align: center;
 }
 
 img {
     width: 200px;
-    border-radius: 50%; /* Círculo perfecto */
-    border: 5px solid #0077b6; /* Borde azul */
+    height: 250px;
+    border-radius: 25%; /* Círculo perfecto */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    transition: transform 0.4s ease;
+    
+}
+
+img:hover {
+    transform: scale(1.08);
+
 }
 
 .icon
@@ -48,7 +60,7 @@ img {
 
 
 h1 {
-    color: #0077b6; /* Texto Azul */
+    color: #BCDADC; /* Texto Azul */
 }
 
 nav ul {
@@ -61,17 +73,17 @@ nav ul {
 
 nav a {
     text-decoration: none; /* Quitamos la línea de abajo del link */
-    color: #333333;
+    color: #BCDADC;
     font-weight: bold;
 }
 
 nav a:hover {
-    color: #0077b6; /* Efecto al pasar el mouse */
+    color: #F1A7B9; /* Efecto al pasar el mouse */
 }
 
 
 button {
-    background-color: #0077b6;
+    background-color: black;
     color: white;
     padding: 10px 20px;
     border: none;
@@ -109,8 +121,80 @@ footer {
     color: #ffffff; /* Los links se vuelven blancos en modo oscuro */
 }
 
+
+#sobre-mi {
+  text-align: left;
+}
+
+.sobre-mi-layout {
+  display: flex;
+  gap: 25px;
+  align-items: center;        
+  justify-content: space-between;
+}
+
+.sobre-mi-texto {
+  flex: 2;                    
+}
+
+.sobre-mi-media {
+  flex: 1;                    
+  display: flex;
+  justify-content: center;    
+}
+
+.sobre-mi-img {
+  width: 220px;
+  height: auto;
+  border-radius: 25%;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    transition: transform 0.4s ease;
+}
+
+.sobre-mi-img:hover img {
+    transform: scale(1.08);
+}
+
+#portafolio {
+    text-align: center;
+}
+
+.grid-portafolio {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.proyecto {
+    overflow: hidden;
+    border-radius: 12px;
+    position: relative;
+}
+
+.proyecto img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 12px;
+    transition: transform 0.4s ease;
+}
+
+.proyecto:hover img {
+    transform: scale(1.08);
+}
+
 @media(max-width: 768px)
 {
+
+    .grid-portafolio {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .proyecto img {
+        height: 160px;
+    }
+
     header{
         flex-direction: column;
         gap: 15 px;

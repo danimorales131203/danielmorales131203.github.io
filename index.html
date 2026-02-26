@@ -4,7 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style_toggle.css">
-    <title>Portafolio | ---</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+    <title>Portafolio Daniel Morales | ---</title>
     <style>
 
     </style>
@@ -12,43 +15,86 @@
 <body>
 
     <header>
-        <h1>[Nombre]</h1>
+        <h1>Daniel Alejandro Morales Henriquez</h1>
+        <h2>Diseñador Multimedia</h2>
         
         <nav>
             <ul>
-                <li><a href="#hero">Inicio</a></li>
+                <li><a href="#hero">¿Quién soy?</a></li>
                 <li><a href="#sobre-mi">Sobre mí</a></li>
+                <li><a href="#portafolio">Portafolio</a></li>
                 <li><a href="#contacto">Contacto</a></li>
             </ul>
         </nav>
 
-        <button onclick="alternarTema()">🌙 Cambiar Tema</button>
+        <button onclick="alternarTema()">Cambiar Tema</button>
     </header>
 
     <main>
         <div>
             
             <section id="hero">
-                <h2>[Section 1]</h2>
-                <img src="images/avatar.png" alt="Avatar del Profe">
-                <p>[Descripción]</p>
+                <h2>¿Quién Soy?</h2>
+                <img src="profilePic.jpeg" alt="Foto de Perfil">
+                <p>Soy un desarrollador multimedia con un enfoque principal en el diseño y desarrollo de videojuegos porque encuentro en este medio la convergencia perfecta entre narrativa, diseño visual, tecnología e interactividad. Mi formación en diseño gráfico digital me permite construir experiencias visuales sólidas y coherentes, mientras que mi interés por la programación y los motores de juego me impulsa a transformar conceptos creativos en sistemas jugables funcionales. Más que solo crear imágenes o código, busco diseñar mundos, mecánicas y experiencias inmersivas donde cada decisión estética y técnica tenga un propósito claro dentro de la experiencia del jugador.</p>
             </section>
 
             <section id="sobre-mi">
-                <h2>[Section 2]</h2>
-                <p>[Descripción]</p>
+                <h2>Sobre Mí</h2>
+
+                <div class="sobre-mi-layout">
+                    <div class="sobre-mi-texto">
+                        <p>
+                            Daniel Morales nace en Tijuana, Baja California México en el año 2003, desde pequeño presentó interés en los videojuegos de fantasía medieval y los deportes de contacto, cumplió su servicio social del bachillerato como maestro de artes marciales mixtas en el club de Niños y Niñas plantel Loma Dorada en Tijuana.
+                            En el 2020 entró a la carrera de Ingeniería en Software en CETYS Universidad Campus Ensenada, en el año 2022 co-escribió y actuó en el cortometraje de ficción y suspenso “Dobles” en el taller de de cortometraje impartido por la directora de cine Nadia Islas Cital, en ese mismo año ganó el primer lugar en la categoría pre-alfa de la Expoingeniería #34 con sede en CETYS Universidad Campus Ensenada con el proyecto: “Sitio Web para Expoingeniería”.
+                            Actualmente estudia Ingeniería en Diseño Gráfico Digital en CETYS Universidad Campus Ensenada, es vicepresidente del club “IDGD & Dragons”. Persigue una carrera en el área de diseño y desarrollo de videojuegos, se encuentra trabajando en el videojuego survival horror “Tlalocan 2099” en su fase de pre-producción.
+                        </p>
+                    </div>
+
+                    <div class="sobre-mi-media">
+                        <img class="sobre-mi-img" src="tijuana.jpg" alt="Tijuana">
+                    </div>
+                </div>
             </section>
 
-            <section id="contacto">
-                <h2>[Section 3]</h2>
-                <p>[Descripción]</p>
+            <section id="portafolio">
+                <h2>Portafolio</h2>
+                <p>Algunos de mis proyectos recientes.</p>
+
+                <div class="grid-portafolio">
+                    <div class="proyecto">
+                        <img src="logoIUS.jpg" alt="Proyecto 1">
+                    </div>
+
+                    <div class="proyecto">
+                        <img src="batmanBookCover.jpg" alt="Proyecto 2">
+                    </div>
+
+                    <div class="proyecto">
+                        <img src="gir3.jpg" alt="Proyecto 3">
+                    </div>
+
+                    <div class="proyecto">
+                        <img src="chess1.jpg" alt="Proyecto 4">
+                    </div>
+
+                    <div class="proyecto">
+                        <img src="zenShowDown.jpg" alt="Proyecto 5">
+                    </div>
+
+                    <div class="proyecto">
+                        <img src="milesMorales.jpg" alt="Proyecto 6">
+                    </div>
+                </div>
             </section>
 
         </div>
     </main>
 
-    <footer>
+    <footer id="contacto">
         <p>© 2026 Programación de Sitios Dinámicos</p>
+        <p>664-363-7791</p>
+        <p>moralesdesign.03@gmail.com</p>
     </footer>
 
     <script>
